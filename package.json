@@ -1,6 +1,6 @@
 {
   "name": "ember-radio-bar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Accessible and extensible radio button group bar.",
   "keywords": [
     "ember-addon"
