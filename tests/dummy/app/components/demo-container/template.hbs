@@ -1,0 +1,16 @@
+<h3>{{title}}</h3>
+
+{{#with (concat name '__output') as |outputName|}}
+  <label for={{outputName}}>Selected:</label>
+  <output id={{outputName}}>
+    {{#if iconComponent}}
+      {{component iconComponent selected}}
+    {{/if}}
+
+    {{selected}}
+  </output>
+{{/with}}
+
+<br>
+
+{{yield selected (action (mut selected))}}

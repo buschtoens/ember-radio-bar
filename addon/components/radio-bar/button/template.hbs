@@ -1,0 +1,25 @@
+{{#with (concat name '__' value) as |radioId|}}
+  {{one-way-radio
+    id=radioId
+    local-class='radio'
+    value=selected
+    option=value
+    name=name
+    tabindex=tabindex
+    update=(action update)
+  }}
+
+  <label
+    local-class="button"
+    for={{radioId}}
+  >
+    {{#if hasBlock}}
+      {{yield value}}
+    {{else}}
+      {{#if icon}}
+        {{component iconComponent icon local-class="button__icon"}}
+      {{/if}}
+        <span local-class="button__label">{{label}}</span>
+    {{/if}}
+  </label>
+{{/with}}

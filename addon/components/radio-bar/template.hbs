@@ -1,0 +1,29 @@
+{{#with (component "radio-bar/button"
+    selected=selected
+    name=name
+    update=(action update)
+    iconComponent=iconComponent
+  ) as |generalButton|
+}}
+  {{#each options as |option|}}
+    {{#with (component generalButton
+        value=option.value
+        label=option.label
+        icon=option.icon
+      ) as |specializedButton|
+    }}
+      {{#if hasBlock}}
+        {{#component specializedButton}}
+          {{yield option}}
+        {{/component}}
+      {{else}}
+        {{component specializedButton}}
+      {{/if}}
+    {{/with}}
+  {{else}}
+    {{yield (hash
+      button=generalButton
+      name=name
+    )}}
+  {{/each}}
+{{/with}}

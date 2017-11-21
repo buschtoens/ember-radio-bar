@@ -1,26 +1,23 @@
 # ember-radio-bar
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/buschtoens/ember-radio-bar.svg)](https://travis-ci.org/buschtoens/ember-radio-bar)
+[![npm version](https://badge.fury.io/js/ember-radio-bar.svg)](http://badge.fury.io/js/ember-radio-bar)
+[![Download Total](https://img.shields.io/npm/dt/ember-radio-bar.svg)](http://badge.fury.io/js/ember-radio-bar)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-radio-bar.svg)](https://emberobserver.com/addons/ember-radio-bar)
+[![Greenkeeper badge](https://badges.greenkeeper.io/buschtoens/ember-radio-bar.svg)](https://greenkeeper.io/)
+[![dependencies Status](https://david-dm.org/buschtoens/ember-radio-bar/status.svg)](https://david-dm.org/buschtoens/ember-radio-bar)
+[![devDependencies Status](https://david-dm.org/buschtoens/ember-radio-bar/dev-status.svg)](https://david-dm.org/buschtoens/ember-radio-bar?type=dev)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-radio-bar`
-* `yarn install`
+```
+ember install ember-radio-bar
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+### With `options` array and
 
-## Running Tests
+```hbs
 
-* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```

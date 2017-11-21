@@ -1,0 +1,84 @@
+<h2>Examples</h2>
+
+{{#demo-container "With options array"
+  as |selected update|
+}}
+  {{radio-bar selected
+    (array
+      (hash value="rocket"    label="Rocket"    icon="rocket")
+      (hash value="magic"     label="Magic"     icon="magic")
+      (hash value="thumbs-up" label="Thumbs up" icon="thumbs-up")
+      (hash value="globe"     label="Globe"     icon="globe")
+      (hash value="heart"     label="Heart"     icon="heart")
+    )
+    update=(action update)
+    iconComponent=(component "fa-icon")
+  }}
+{{/demo-container}}
+
+{{#demo-container "With options array and custom template"
+  as |selected update|
+}}
+  {{#radio-bar selected
+    (array
+    (hash value="rocket"    label="Rocket"    icon="rocket")
+    (hash value="magic"     label="Magic"     icon="magic")
+    (hash value="thumbs-up" label="Thumbs up" icon="thumbs-up")
+    (hash value="globe"     label="Globe"     icon="globe")
+    (hash value="heart"     label="Heart"     icon="heart")
+    )
+    update=(action update)
+    iconComponent=(component "fa-icon")
+    as |option|
+  }}
+    {{fa-icon option.icon}}
+    {{option.label}}
+  {{/radio-bar}}
+{{/demo-container}}
+
+{{#demo-container "Pure template usage"
+  as |selected update|
+}}
+  {{#radio-bar selected
+    update=(action update)
+    iconComponent=(component "fa-icon")
+    as |bar|
+  }}
+    {{bar.button "rocket"    label="Rocket"    icon="rocket"}}
+    {{bar.button "magic"     label="Magic"     icon="magic"}}
+    {{bar.button "thumbs-up" label="Thumbs up" icon="thumbs-up"}}
+    {{bar.button "globe"     label="Globe"     icon="globe"}}
+    {{bar.button "heart"     label="Heart"     icon="heart"}}
+  {{/radio-bar}}
+{{/demo-container}}
+
+{{#demo-container "Pure template usage with custom template"
+  as |selected update|
+}}
+  {{#radio-bar selected
+    update=(action update)
+    iconComponent=(component "fa-icon")
+    as |bar|
+  }}
+    {{#bar.button "rocket"}}
+      {{fa-icon "rocket"}}
+      <span>Rocket</span>
+    {{/bar.button}}
+    {{#bar.button "magic"}}
+      {{fa-icon "magic"}}
+      <span>Magic</span>
+    {{/bar.button}}
+    {{#bar.button "thumbs-up"}}
+      {{fa-icon "thumbs-up"}}
+      <span>Thumbs up</span>
+    {{/bar.button}}
+    {{#bar.button "globe"}}
+      {{fa-icon "globe"}}
+      <span>Globe</span>
+    {{/bar.button}}
+    {{#bar.button "heart"}}
+      {{fa-icon "heart"}}
+      <span>Heart</span>
+    {{/bar.button}}
+  {{/radio-bar}}
+{{/demo-container}}

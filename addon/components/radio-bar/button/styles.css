@@ -1,0 +1,34 @@
+.radio {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button {
+  padding: .25em 1em;
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  line-height: 1.5;
+
+  .radio:focus + & {
+    outline: solid;
+  }
+
+  .radio:checked + & {
+    background: blue;
+  }
+
+  &__element {
+    & + & {
+      margin-left: .5em;
+    }
+  }
+
+  &__label,
+  &__icon {
+    composes: button__element;
+  }
+}

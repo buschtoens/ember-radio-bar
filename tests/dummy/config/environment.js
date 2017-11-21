@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = function(environment) {
-  let ENV = {
+  const ENV = {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
@@ -22,6 +22,10 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+  };
+
+  ENV['ember-radio-bar'] = {
+    iconComponent: 'fa-icon'
   };
 
   if (environment === 'development') {
