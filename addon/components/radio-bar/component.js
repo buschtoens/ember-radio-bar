@@ -19,7 +19,7 @@ import {
 import layout from './template';
 import styles from './styles';
 
-const { 'ember-radio-bar': config } = appConfig;
+const { 'ember-radio-bar': config = {} } = appConfig;
 
 // @tagName('fieldset')
 export default class RadioBarComponent extends Component.extend({
