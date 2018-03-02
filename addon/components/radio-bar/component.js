@@ -37,7 +37,6 @@ export default class RadioBarComponent extends Component.extend({
 
   @argument
   @type(optional(arrayOf(Option)))
-  @required
   options;
 
   @argument
